@@ -2,7 +2,7 @@ import gradio as gr
 import os
 import openai
 
-openai.api_key = "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"
+openai.api_key = os.environ.get('openai')
 
 def answer_request(text):
     completion = openai.ChatCompletion.create(
